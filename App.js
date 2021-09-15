@@ -1,25 +1,21 @@
 import * as React from 'react';
 import { Text, View,StyleSheet, Platform, StatusBar, SafeAreaView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Holdings from './screens/Holdings';
-import Pools from './screens/Pools';
-import Tokens from './screens/Tokens';
-
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import TopTabNavigator from './Navigators/TopTabNavigator';
 const Tab = createMaterialTopTabNavigator();
+
 
 export default function App() {
   return (
-<SafeAreaView>
+<SafeAreaProvider style={styles.container}>
+  <View>
+    <Text>Hello</Text>
+  </View>
+  <TopTabNavigator/>
+</SafeAreaProvider>
 
-<NavigationContainer >
-      <Tab.Navigator style={styles.container} >
-        <Tab.Screen name="Holdings" component={Holdings} />
-        <Tab.Screen name="Pools" component={Pools} />
-        <Tab.Screen name="Tokens" component={Tokens} />
-      </Tab.Navigator>
-    </NavigationContainer>
-    </SafeAreaView>
+
   );
 
   
