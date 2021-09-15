@@ -53,7 +53,7 @@ export default function Holdings() {
                 <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
               </ListItem.Content>
               <View>
-                <Text>$123.12</Text>
+                <Text style={styles.amount}>$123.12</Text>
               </View>
             </ListItem>
           ))
@@ -105,5 +105,8 @@ export default function Holdings() {
 const styles = StyleSheet.create({
   text:{
 padding:12
+  },
+  amount:{
+    color:'red'
   }
 })

@@ -76,7 +76,7 @@ export default function Tokens() {
                                     <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
                                 </ListItem.Content>
                                 <View>
-                                    <Text>$123.12</Text>
+                                    <Text style={styles.amount}>$123.12</Text>
                                 </View>
                             </ListItem>
                         ))
@@ -96,5 +96,8 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         padding:10
+    },
+    amount:{
+        color:'dodgerblue'
     }
 })
