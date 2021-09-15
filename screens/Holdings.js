@@ -35,14 +35,19 @@ export default function Holdings() {
   return (
     <SafeAreaView>
       <ScrollView>
+
       <View>
+
         <Text style={styles.text}>Yeild Farming</Text>
       </View>
       <View>
         {
           list.map((l, i) => (
             <ListItem key={i} bottomDivider>
-              <Avatar source={{ uri: l.avatar_url }} />
+              <View>
+              <CryptocurrencyIcon name="btc" size={48} />
+
+              </View>
               <ListItem.Content>
                 <ListItem.Title>{l.name}</ListItem.Title>
                 <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
@@ -61,7 +66,10 @@ export default function Holdings() {
         {
           list.map((l, i) => (
             <ListItem key={i} bottomDivider>
-              <Avatar source={{ uri: l.avatar_url }} />
+<View>
+<CryptocurrencyIcon name="eth" size={48} />
+
+</View>
               <ListItem.Content>
                 <ListItem.Title>{l.name}</ListItem.Title>
                 <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
@@ -77,7 +85,10 @@ export default function Holdings() {
         {
           list.map((l, i) => (
             <ListItem key={i} bottomDivider>
-              <Avatar source={{ uri: l.avatar_url }} />
+<View>
+<CryptocurrencyIcon name="ark" size={48} />
+
+</View>
               <ListItem.Content>
                 <ListItem.Title>{l.name}</ListItem.Title>
                 <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
@@ -85,7 +96,6 @@ export default function Holdings() {
             </ListItem>
           ))
         }
-                <CryptocurrencyIcon name="btc" size={48} />
 
       </View>
       </ScrollView>

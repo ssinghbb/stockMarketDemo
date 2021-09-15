@@ -3,7 +3,8 @@ import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
 import DropDownPicker from 'react-native-dropdown-picker';
 import { ListItem, Avatar } from 'react-native-elements'
 import { Icon } from 'react-native-elements';
-import { justifyContent } from 'styled-system';
+import CryptocurrencyIcon from "react-native-cryptocurrency-hexagon-icons"
+
 
 export default function Tokens() {
     const [open, setOpen] = useState(false);
@@ -66,7 +67,10 @@ export default function Tokens() {
                     {
                         list.map((l, i) => (
                             <ListItem key={i} bottomDivider>
-                                <Avatar source={{ uri: l.avatar_url }} />
+<View>
+<CryptocurrencyIcon name="appc" size={48} />
+
+</View>
                                 <ListItem.Content>
                                     <ListItem.Title>{l.name}</ListItem.Title>
                                     <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>

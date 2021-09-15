@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import DropDownPicker from 'react-native-dropdown-picker';
 import { ListItem, Avatar } from 'react-native-elements'
+import CryptocurrencyIcon from "react-native-cryptocurrency-hexagon-icons"
 
 import { Icon } from 'react-native-elements';
 export default function Pools() {
@@ -74,7 +75,10 @@ export default function Pools() {
         {
           list.map((l, i) => (
             <ListItem key={i} bottomDivider>
-              <Avatar source={{ uri: l.avatar_url }} />
+<View>
+<CryptocurrencyIcon name="atm" size={48} />
+
+</View>
               <ListItem.Content>
                 <ListItem.Title>{l.name}</ListItem.Title>
                 <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
