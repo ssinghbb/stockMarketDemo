@@ -1,18 +1,20 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
-import { Text, View,StyleSheet, Platform, StatusBar, SafeAreaView } from 'react-native';
+import { Text, View,StyleSheet, Platform, StatusBar, SafeAreaView, Image } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import TopTabNavigator from './Navigators/TopTabNavigator';
-const Tab = createMaterialTopTabNavigator();
+import {DrawerNavigator} from './Navigators/DrawerNavigator'
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 
+const Tab = createMaterialTopTabNavigator();
+const Drawer=createDrawerNavigator();
 
 export default function App() {
   return (
 <SafeAreaProvider style={styles.container}>
-  <View>
-    <Text>Hello</Text>
-  </View>
-  <TopTabNavigator/>
+  <DrawerNavigator/>
 </SafeAreaProvider>
 
 
@@ -22,6 +24,5 @@ export default function App() {
 }
 const styles = StyleSheet.create({
   container:{
-    paddingTop:Platform.OS ==='android' ?StatusBar.currentHeight:0    
   }
 })

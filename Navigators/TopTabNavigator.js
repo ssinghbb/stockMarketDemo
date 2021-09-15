@@ -5,12 +5,12 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import Holdings from '../screens/Holdings'
 import Pools from '../screens/Pools'
 import Tokens from '../screens/Tokens'
+import { DrawerNavigator } from './DrawerNavigator'
 const Tab=createMaterialTopTabNavigator();
  function MyTabs() {
     return (
             <Tab.Navigator initialRouteName="Holdings"
             tabBarOptions={{
-                activeTintColor:"#e91e63",
             }}>
                     <Tab.Screen name="Holdings" component={Holdings}></Tab.Screen>
                     <Tab.Screen name="Pools" component={Pools}></Tab.Screen>
@@ -20,8 +20,6 @@ const Tab=createMaterialTopTabNavigator();
 }
 export default function TopTabNavigator(){
     return(
-        <NavigationContainer>
             <MyTabs/>
-        </NavigationContainer>
-    )
+     )
 }
